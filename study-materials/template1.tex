@@ -1,0 +1,117 @@
+\documentclass[12pt]{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Margins and Heading and Such
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\usepackage{amsmath}
+\usepackage{amssymb}
+
+\setlength{\oddsidemargin}{.25in}
+\setlength{\evensidemargin}{.25in}
+\setlength{\textwidth}{6.25in}
+\setlength{\topmargin}{-0.4in}
+\setlength{\textheight}{8.5in}
+
+\newcommand{\heading}[5]{
+   \renewcommand{\thepage}{#1-\arabic{page}}
+   \noindent
+   \begin{center}
+   \framebox{
+      \vbox{
+    \hbox to 5.78in { {\bf 6.875/18.425 Cryptography and Cryptanalysis}
+         \hfill #2 }
+       \vspace{4mm}
+       \hbox to 5.78in { {\Large \hfill #5  \hfill} }
+       \vspace{2mm}
+       \hbox to 5.78in { {\it #3 \hfill #4} }
+      }
+   }
+   \end{center}
+   \vspace*{4mm}
+}
+
+
+\setlength{\parindent}{0in}
+\setlength{\parskip}{0.1in}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% MODIFY THE FOLLOWING LINE  WITH YOUR NAME
+
+\newcommand{\handout}[3]{\heading{#1}{#2}{Your Name Goes Here}{}{#3}}
+
+\begin{document}
+\handout{5}{February 16, 2005}{Problem Set 1}
+
+\textbf{Collaborators:} I collaborated with the following students on
+this assignment: <Insert Names Here>
+
+
+\subsection*{Problem 1}
+
+Suppose $p$ is a prime and $g$ and $h$ are both generators of
+$Z_p^*$. Prove or disprove the following statements about equality
+of probability distributions:
+
+\begin{eqnarray*}
+\textbf{A:} & \ \ \ \ \ &
+\{x \leftarrow Z_p^*: g^x \mod p\} = \{x \leftarrow Z_p^*; y \leftarrow Z_p^*: g^{xy} \mod p\} \\
+\textbf{B:} & \ \ \ \ \ &
+\{x \leftarrow Z_p^*: g^x \mod p\} = \{x \leftarrow Z_p^*: h^{x} \mod p\} \\
+\textbf{C:} & \ \ \ \ \ &
+\{x \leftarrow Z_p^*: g^x \mod p\} = \{x \leftarrow Z_p^*: x^g \mod p\} \\
+\textbf{D:} & \ \ \ \ \ &
+\{x \leftarrow Z_p^*: x^g \mod p\} = \{x \leftarrow Z_p^*: x^{gh} \mod p\} \\
+\end{eqnarray*}
+
+
+\textbf{Solution: } <Your Solution Goes Here>
+
+
+\newpage
+
+\subsection*{Problem 2}
+Suppose that the Prime Discrete Logarithm Problem is easy. That is,
+suppose that there exists a probabilistic, polynomial time algorithm
+$A$ that, on inputs $p$, $g$ and $g^x \mod p$,  outputs $x$ if $p$
+is a prime, $g$ is a generator of $Z_p^*$ and $g^x \mod p$ is prime.
+Show that there exists a probabilistic polynomial-time algorithm,
+$B$, that solves the Discrete Logarithm Problem.
+
+\textbf{Solution: } <Your Solution Goes Here>
+
+\newpage
+
+\subsection*{Problem 3 }
+
+We define the Lily problem as: given two integers $n$ and $S$
+determine whether $S$ is relatively prime to $\phi(n)$. Prove that
+if it is hard to determine on inputs two integers $n$ and $e$
+whether $e$ is relatively prime with $\phi(n)$, then  the RSA
+function is hard to invert.
+
+\textbf{Solution: } <Your Solution Goes Here>
+
+\newpage
+
+\subsection*{Problem 4: Factoring }
+
+Let $O_n$ be an oracle that on input $x$ returns a square root of $x
+\mod n$, if one exists, and $\bot$ otherwise. Prove that there
+exists a probabilistic polynomial-time algorithm that on input an
+integer $n$ and access to  $O_n$ outputs $n$'s factorization.
+
+
+\textbf{Solution: } <Your Solution Goes Here>
+
+\newpage
+
+\subsection*{Problem 5: Factoring and OWF (OPTIONAL)}
+
+Prove that if factoring is hard, then one-way
+  functions (as defined in class) exist.
+
+\textbf{Solution: } <Your Solution Goes Here>
+
+
+\end{document}
